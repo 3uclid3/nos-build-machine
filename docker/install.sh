@@ -28,7 +28,7 @@ apt-get update -qq && export DEBIAN_FRONTEND=noninteractive && \
 
 
 echo "Installing Meson"
-pip3 install --user meson
+pip3 install meson
 
 echo "Installing Taskfile"
 sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
