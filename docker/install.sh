@@ -21,14 +21,14 @@ if [ -z "$LLVM" ]; then
   exit 1
 fi
 
-echo "Installing necessary packages from standard repositories"
+echo "Installing packages from standard repositories"
 apt-get update -qq && export DEBIAN_FRONTEND=noninteractive && \
     apt-get install -y --no-install-recommends software-properties-common apt-utils wget curl file gpg \
         build-essential ccache git python3 python3-pip xorriso ninja-build
 
-
-echo "Installing Meson"
+echo "Installing packages from pip"
 pip3 install meson
+pip3 install gcovr
 
 echo "Installing Taskfile"
 sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
