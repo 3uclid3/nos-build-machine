@@ -38,12 +38,12 @@ wget https://apt.llvm.org/llvm.sh
 chmod +x llvm.sh
 ./llvm.sh "$LLVM" all
 
-sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-"$LLVM" 100
-sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-"$LLVM" 100
+update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-"$LLVM" 100
+update-alternatives --install /usr/bin/clang clang /usr/bin/clang-"$LLVM" 100
 
-sudo update-alternatives --install /usr/bin/lld lld /usr/bin/lld-"$LLVM" 100
+update-alternatives --install /usr/bin/lld lld /usr/bin/lld-"$LLVM" 100
 
-sudo update-alternatives --install /usr/bin/llvm-ar llvm-ar /usr/bin/llvm-ar-"$LLVM" 100
-sudo update-alternatives --install /usr/bin/llvm-strip llvm-strip /usr/bin/llvm-strip-"$LLVM" 100
+update-alternatives --install /usr/bin/llvm-ar llvm-ar /usr/bin/llvm-ar-"$LLVM" 100
+update-alternatives --install /usr/bin/llvm-strip llvm-strip /usr/bin/llvm-strip-"$LLVM" 100
 
-sudo update-alternatives --install /usr/bin/clang-tidy clang-tidy /usr/bin/clang-tidy-"$LLVM" 100
+update-alternatives --install /usr/bin/clang-tidy clang-tidy /usr/bin/clang-tidy-"$LLVM" 100
